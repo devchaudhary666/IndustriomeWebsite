@@ -49,8 +49,8 @@ const [isSubmitting, setIsSubmitting] = useState(false);
     });
 
       // Add a small delay to ensure the request completes
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
+    await new Promise(resolve => setTimeout(resolve, 3000));
+
     toast.success('Thank you! We will be in touch within 24 hours.');
     
     // Reset form
