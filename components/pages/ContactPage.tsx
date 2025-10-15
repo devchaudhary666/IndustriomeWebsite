@@ -48,6 +48,9 @@ const [isSubmitting, setIsSubmitting] = useState(false);
       }),
     });
 
+      // Add a small delay to ensure the request completes
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
     toast.success('Thank you! We will be in touch within 24 hours.');
     
     // Reset form
@@ -252,6 +255,7 @@ const [isSubmitting, setIsSubmitting] = useState(false);
                     type="submit"
                     className="w-full bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700"
                     size="lg"
+                    disabled={isSubmitting}
                   >
                     Submit 
                     <Send className="ml-2" size={20} />
