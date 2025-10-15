@@ -169,8 +169,9 @@ export function HomePage({ onNavigate }: HomePageProps) {
               Smart Manufacturing Made Simple
             </h1>
             
+            
             <p className="text-xl lg:text-2xl mb-10 text-blue-50 max-w-3xl mx-auto">
-              Connect your factory floor to intelligent insights—no complexity, no long deployments
+              Connect your factory floor to AI enabled intelligent insights—no complexity, no long deployments
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

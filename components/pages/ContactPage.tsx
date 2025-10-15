@@ -30,27 +30,27 @@ const [isSubmitting, setIsSubmitting] = useState(false);
   setIsSubmitting(true);
 
   try {
-    const emailBody = `
-
-Name: ${formData.firstName} ${formData.lastName}
-Email: ${formData.email}
-Company: ${formData.company}
-Phone: ${formData.phone}
-Industry Type: ${formData.industry}
-Number of Employees: ${formData.employees}
-
-Message:
-${formData.message}
-
-Submitted: ${new Date().toLocaleString()}
-    `.trim();
-
-    const mailtoLink = `mailto:info@industriometech.com?subject=Contact Form - ${formData.company}&body=${encodeURIComponent(emailBody)}`;
-    
-    window.location.href = mailtoLink;
+    const response = await fetch('https://script.google.com/macros/s/AKfycbwqqLnxOBnYMt_P84jLX7Y1iuktfa3ZcKhsFKwZNJ3-6VWk126angCIjAD78QzmrP8aKA/exec', {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        company: formData.company,
+        phone: formData.phone,
+        industry: formData.industry,
+        employees: formData.employees,
+        message: formData.message,
+      }),
+    });
 
     toast.success('Thank you! We will be in touch within 24 hours.');
     
+    // Reset form
     setFormData({
       firstName: '',
       lastName: '',
@@ -195,7 +195,7 @@ Submitted: ${new Date().toLocaleString()}
 
                   <div className="grid md:grid-cols-2 gap-4">
                     
-                    <div className="grid md:grid-cols-2 gap-6">
+                    
                       <div>
                         <Label htmlFor="industry">Industry Type *</Label>
                         <Input
@@ -207,17 +207,17 @@ Submitted: ${new Date().toLocaleString()}
                         />
                       </div>
 
-  <div>
-    <Label htmlFor="employees">Number of Employees *</Label>
-    <Input
-      id="employees"
-      required
-      value={formData.employees}
-      onChange={(e) => setFormData({ ...formData, employees: e.target.value })}
-      placeholder="e.g., 50-100"
-    />
-  </div>
-</div>
+                        <div>
+                          <Label htmlFor="employees">Number of Employees *</Label>
+                          <Input
+                            id="employees"
+                            required
+                            value={formData.employees}
+                            onChange={(e) => setFormData({ ...formData, employees: e.target.value })}
+                            placeholder="e.g., 50-100"
+                          />
+                        </div>
+                      
                     
                   </div>
 
