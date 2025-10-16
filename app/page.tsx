@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react';
+import Head from 'next/head';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { HomePage } from '@/components/pages/HomePage';
@@ -17,6 +18,35 @@ export default function App() {
 
   return (
     <>
+      <Head>
+        <title>Industriome Technologies - AI-Native IIoT Platform for Smart Manufacturing</title>
+        <meta name="description" content="Industriome Technologies - AI-native IIoT platform for smart manufacturing. Connect your factory floor to intelligent insights with flexible deployment, fast implementation, and affordable pricing for manufacturers." />
+        <meta name="keywords" content="IIoT platform, industrial IoT, smart manufacturing, manufacturing intelligence, predictive maintenance, Industry 4.0, manufacturing analytics, production monitoring, AI manufacturing, factory automation" />
+        <meta name="author" content="Industriome Technologies" />
+        
+        <meta property="og:title" content="Industriome Technologies - The Genome of Manufacturing" />
+        <meta property="og:description" content="Smart Manufacturing Made Simple. AI-native IIoT platform that connects your equipment to deliver real-time insights. Deploy in weeks, not months." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.industriometech.com" />
+        <meta property="og:image" content="https://www.industriometech.com/images/og-image.jpg" />
+        <meta property="og:site_name" content="Industriome Technologies" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Industriome Technologies - Smart Manufacturing Platform" />
+        <meta name="twitter:description" content="AI-native IIoT platform for manufacturers. Real-time monitoring, predictive maintenance, and intelligent insights." />
+        <meta name="twitter:image" content="https://www.industriometech.com/images/twitter-card.jpg" />
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charSet="UTF-8" />
+        
+        <link rel="canonical" href="https://www.industriometech.com" />
+        <link rel="icon" href="/favicon.ico" />
+        
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
+      </Head>
+
       <style jsx global>{`
         * {
           color: #000000 !important;
