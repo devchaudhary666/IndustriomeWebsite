@@ -6,6 +6,8 @@ import { ArrowRight, Plug, Database, Brain, Factory, Zap, Gauge, CheckCircle2 } 
 import { Button } from '../ui/button';
 import { Card } from '../ui/card';
 
+<meta name="google-site-verification" content="POLVP-3VSUzuFVQJ5HNJuF6oJ2J2eNdYWXmXoRz2uXU" />
+
 interface HomePageProps {
   onNavigate: (page: string) => void;
 }
