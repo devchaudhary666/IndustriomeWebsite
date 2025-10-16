@@ -98,9 +98,7 @@ export function Footer({ onNavigate }: FooterProps) {
         </div>
 
         {/* Trust Signals */}
-        <div className="mt-8 pt-8 border-t border-slate-800 text-center text-sm text-slate-500">
-          <p>ISO 27001 Certified | SOC 2 Type II | GDPR Compliant | Made in India 🇮🇳</p>
-        </div>
+        
       </div>
     </footer>
   );
