@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Industriome - The Genome of Manufacturing",
     description: "Enterprise-grade IIoT intelligence for SME manufacturers. Shop floor to cloud in weeks, not quarters.",
-    url: "https://industriometech.com",
+    url: "https://www.industriometech.com",
     siteName: "Industriome",
     locale: "en_US",
     type: "website",
