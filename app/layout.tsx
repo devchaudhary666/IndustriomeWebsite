@@ -48,12 +48,31 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Industriome Technologies",
+    "url": "https://www.industriometech.com",
+    "logo": "https://www.industriometech.com/logo.png",
+    "description": "Enterprise-grade IIoT intelligence for SME manufacturers. Shop floor to cloud in weeks, not quarters.",
+    "founder": {
+      "@type": "Organization",
+      "name": "Industriome Technologies"
+    }
+  };
+
   return (
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />
+        <script
+          type="application/ld-json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema)
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
